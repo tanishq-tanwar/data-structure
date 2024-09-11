@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>merge</title>
+  </head>
+  <body>
+    <script>
+      'use strict';
+      let merge = function (num1, m, num2, n) {
+        for (let i = 0; i < n; i++) {
+          num1.push(num2[i]);
+          num2.pop(num2[i]);
+        }
+        m = num1.length;
+        n = num2.length;
+        console.log(m);
+        console.log(n);
+        console.log(num1);
+      };
+
+      console.log(merge([1, 2, 3], 3, [4, 5, 6], 3));
+    </script>
+  </body>
+</html>

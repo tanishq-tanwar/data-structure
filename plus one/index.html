@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>plus one</title>
+  </head>
+  <body>
+    <script>
+      'use strict';
+      let plusOne = function (nums) {
+        let extraValue = '';
+        let newArray;
+        for (let i = 0; i < nums.length; i++) {
+          extraValue += nums[i];
+          newArray = String(Number(extraValue) + 1);
+        }
+        return [...newArray];
+      };
+
+      console.log(plusOne([1, 2, 3, 2]));
+    </script>
+  </body>
+</html>

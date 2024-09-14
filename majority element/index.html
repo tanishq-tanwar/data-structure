@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Majority Element</title>
+  </head>
+  <body>
+    <script>
+      'use strict';
+      function majorityElement(nums) {
+        // let countObj = {};
+        // for (let i = 0; i < nums.length; i++) {
+        //   countObj[nums[i]]
+        //     ? (countObj[nums[i]] = countObj[nums[i]] + 1)
+        //     : (countObj[nums[i]] = 1);
+        // }
+
+        // for (let key in countObj) {
+        //   console.log(Math.max(countObj[key]));
+        // }
+
+        nums.sort((a, b) => a - b);
+        const majorityIndex = Math.floor(nums.length / 2);
+        return nums[majorityIndex];
+      }
+
+      let nums = [2, 2, 1, 1, 1, 2, 2];
+      console.log(majorityElement(nums));
+    </script>
+  </body>
+</html>

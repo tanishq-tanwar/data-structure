@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Move Zeroes</title>
+  </head>
+  <body>
+    <script>
+      'use strict';
+      function moveZeroes(nums) {
+        nums.sort((a, b) => a - b);
+        for (let i = 0; i < nums.length; i++) {
+          if (nums[i] === 0) {
+            let zero = nums[i];
+            nums.splice(zero, 1);
+            nums.push(zero);
+          }
+        }
+        return nums;
+      }
+
+      let nums = [0, 1, 0, 3, 12];
+      console.log(moveZeroes(nums));
+    </script>
+  </body>
+</html>

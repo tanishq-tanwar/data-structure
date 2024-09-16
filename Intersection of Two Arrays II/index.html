@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intersection of Two Arrays II</title>
+  </head>
+  <body>
+    <script>
+      'use strict';
+      function intersect(num1, num2) {
+        let intersection = [];
+        for (let i = 0; i < num1.length; i++) {
+          for (let j = 0; j < num2.length; j++) {
+            if (num1[i] === num2[j]) {
+              intersection.push(num1[i]);
+              console.log(num1[i]);
+            }
+          }
+        }
+
+        return intersection;
+
+        // return num1.filter((element) => num2.includes(element));
+      }
+
+      let num1 = [4, 9, 5];
+      let num2 = [9, 4, 9, 8, 4];
+      console.log(intersect(num1, num2));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contains Duplicate</title>
+  </head>
+  <body>
+    <script>
+      'use strict';
+      function containsDuplicate(nums) {
+        let countObj = {};
+        for (let i = 0; i < nums.length; i++) {
+          if (countObj[nums[i]]) {
+            return true;
+          } else {
+            countObj[nums[i]] = 1;
+          }
+        }
+        return false;
+      }
+
+      let nums = [2, 2, 1, 1, 1, 2, 2];
+      console.log(containsDuplicate(nums));
+    </script>
+  </body>
+</html>
